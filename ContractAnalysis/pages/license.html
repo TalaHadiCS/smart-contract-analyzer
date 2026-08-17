@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Groups | SANAD</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/license.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         SANAD HEADER
+    ========================================== -->
+
+    <header class="sanad-header">
+
+        <div class="sanad-brand">
+
+            <div class="sanad-logo">
+
+                <h1>سَنَد</h1>
+
+                <span>SANAD</span>
+
+            </div>
+
+            <p>AI Contract Intelligence</p>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="sanad-user">
+
+            <div class="sanad-avatar" id="userAvatar">
+                U
+            </div>
+
+            <span id="userName">
+                User
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         PAGE LAYOUT
+    ========================================== -->
+
+    <div class="license-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="license-sidebar">
+
+            <nav>
+
+                <a href="dashboard.html" class="side-link">
+                    Dashboard
+                </a>
+
+                <a href="upload-contract.html" class="side-link">
+                    Upload Contracts
+                </a>
+
+                <a href="my-contracts.html" class="side-link">
+                    My Contracts
+                </a>
+
+                <a href="chatbot.html" class="side-link">
+                    AI Assistant
+                </a>
+
+                <a href="license.html" class="side-link active">
+                    Groups
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html" class="side-link">
+                    Settings
+                </a>
+
+                <a href="login.html" class="side-link">
+                    Exit
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <main class="license-main">
+
+            <div class="license-container">
+
+
+                <!-- =================================
+                     TITLE
+                ================================== -->
+
+                <section class="license-title">
+
+                    <span class="section-label">
+                        GROUPS
+                    </span>
+
+                    <h2>
+                        Contract Groups
+                    </h2>
+
+                    <p>
+                        View contracts and documents assigned to your department.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================
+                     DEPARTMENT NOTICE
+                ================================== -->
+
+                <section class="department-card">
+
+                    <div class="department-icon">
+                        ◫
+                    </div>
+
+                    <div class="department-content">
+
+                        <span>
+                            YOUR DEPARTMENT
+                        </span>
+
+                        <h3 id="departmentName">
+                            Department not set
+                        </h3>
+
+                        <p id="departmentMessage">
+                            Please update your department in Settings
+                            to access your department contracts.
+                        </p>
+
+                    </div>
+
+                    <a href="settings.html" class="settings-button">
+                        Update Settings
+                    </a>
+
+                </section>
+
+
+                <!-- =================================
+                     CONTRACT SECTION
+                ================================== -->
+
+                <section class="contracts-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                DEPARTMENT CONTRACTS
+                            </span>
+
+                            <h3>
+                                Contracts
+                            </h3>
+
+                        </div>
+
+
+                        <a href="upload-contract.html"
+                           class="upload-button">
+
+                            + Upload Contract
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- CONTRACTS -->
+
+                    <div id="departmentContracts"
+                         class="department-contracts">
+
+
+                        <!-- EMPTY STATE -->
+
+                        <div class="empty-state"
+                             id="emptyState">
+
+                            <div class="empty-icon">
+                                ◫
+                            </div>
+
+                            <h3>
+                                No contracts available
+                            </h3>
+
+                            <p>
+                                Contracts uploaded for your department
+                                will appear here.
+                            </p>
+
+                            <a href="upload-contract.html"
+                               class="empty-button">
+
+                                Upload Contract
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     INFORMATION
+                ================================== -->
+
+                <section class="groups-info">
+
+                    <div class="info-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Department-based access
+                        </strong>
+
+                        <p>
+                            SANAD organizes contracts according to the
+                            department assigned to your user account.
+                            Update your department from Settings to
+                            access the relevant contracts.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="../js/global.js"></script>
+    <script src="../js/license.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+/* =========================================================
+   SANAD SHARED LAYOUT FIX
+   Used for Dashboard + Groups
+   Matches Upload / My Contracts / AI Assistant
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sanad-header {
+    height: 65px;
+    width: 100%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    border-bottom: 1px solid #e7ebf0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SANAD BRAND
+   ========================================================= */
+
+.sanad-brand {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.sanad-logo {
+    min-width: 105px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+.sanad-logo h1 {
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    color: #173e68;
+
+    line-height: 1.1;
+}
+
+.sanad-logo span {
+    margin-top: 3px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #00a99d;
+
+    font-weight: 600;
+}
+
+.sanad-brand > p {
+    margin: 0;
+
+    padding-left: 20px;
+
+    border-left: 1px solid #dfe5eb;
+
+    color: #718096;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   USER
+   ========================================================= */
+
+.sanad-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #334155;
+
+    font-size: 13px;
+}
+
+.sanad-avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #173e68;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN PAGE LAYOUT
+   ========================================================= */
+
+.assistant-layout {
+    display: flex;
+
+    width: 100%;
+
+    min-height: calc(100vh - 65px);
+
+    background: #f5f7fa;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.assistant-sidebar {
+    width: 217px;
+
+    min-width: 217px;
+
+    min-height: calc(100vh - 65px);
+
+    background: linear-gradient(
+        180deg,
+        #19458a 0%,
+        #174f86 52%,
+        #13839a 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    padding: 30px 15px 14px;
+}
+
+
+/* =========================================================
+   SIDEBAR NAV
+   ========================================================= */
+
+.assistant-sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* =========================================================
+   SIDEBAR LINKS
+   ========================================================= */
+
+.assistant-sidebar .side-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 41px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover */
+
+.assistant-sidebar .side-link:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+
+/* Active */
+
+.assistant-sidebar .side-link.active {
+    background: rgba(255, 255, 255, 0.15);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ACTIVE LEFT INDICATOR
+   ========================================================= */
+
+.assistant-sidebar .side-link.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -15px;
+
+    top: 10px;
+
+    width: 3px;
+
+    height: 21px;
+
+    border-radius: 0 3px 3px 0;
+
+    background: #00c7b7;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.assistant-main {
+    flex: 1;
+
+    min-width: 0;
+
+    background: #f5f7fa;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .sanad-header {
+        padding: 0 18px;
+    }
+
+    .sanad-brand > p {
+        display: none;
+    }
+
+    .assistant-sidebar {
+        width: 190px;
+        min-width: 190px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sanad-header {
+        height: 60px;
+    }
+
+    .sanad-logo h1 {
+        font-size: 20px;
+    }
+
+    .sanad-user span {
+        display: none;
+    }
+
+    .assistant-sidebar {
+        width: 70px;
+        min-width: 70px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .assistant-sidebar .side-link {
+        justify-content: center;
+
+        padding: 0;
+
+        font-size: 0;
+    }
+
+    .assistant-sidebar .side-link.active::before {
+        left: -8px;
+    }
+
+}
+
+

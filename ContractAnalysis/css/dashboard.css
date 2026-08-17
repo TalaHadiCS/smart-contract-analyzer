@@ -1,0 +1,1035 @@
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+    --navy: #123f83;
+    --blue: #168fc4;
+    --teal: #19bfa6;
+    --background: #f6f8fb;
+    --white: #ffffff;
+    --text: #17233b;
+    --muted: #7d8798;
+    --border: #e5eaf0;
+    --red: #e65561;
+    --red-soft: #fff1f2;
+    --blue-soft: #edf7fb;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   SANAD HEADER
+========================================= */
+
+.sanad-header {
+    width: 100%;
+    height: 78px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.sanad-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.sanad-logo h1 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+.sanad-logo span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--teal);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.sanad-brand > p {
+    margin: 0;
+    padding-left: 18px;
+
+    border-left: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.sanad-user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sanad-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--navy);
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DASHBOARD LAYOUT
+========================================= */
+
+.assistant-layout {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.assistant-sidebar {
+    width: 220px;
+
+    flex-shrink: 0;
+
+    min-height: calc(100vh - 78px);
+
+    padding: 32px 18px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        180deg,
+        #123f83 0%,
+        #15518a 55%,
+        #117b98 100%
+    );
+}
+
+
+/* =========================================
+   SIDEBAR NAV
+========================================= */
+
+.assistant-sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   SIDEBAR LINKS
+========================================= */
+
+.side-link {
+    position: relative;
+
+    display: block;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    color: #edf4fb;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.side-link:hover {
+    background-color: rgba(255,255,255,0.08);
+
+    color: white;
+}
+
+.side-link.active {
+    background-color: rgba(255,255,255,0.13);
+
+    color: white;
+
+    font-weight: 700;
+}
+
+.side-link.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+
+    top: 8px;
+    bottom: 8px;
+
+    width: 4px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: linear-gradient(
+        180deg,
+        #11b7e6,
+        #19c7b0
+    );
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.assistant-main {
+    flex: 1;
+
+    min-width: 0;
+
+    background-color: var(--background);
+}
+
+
+/* =========================================
+   DASHBOARD CONTAINER
+========================================= */
+
+.dashboard-container {
+    width: min(1160px, 90%);
+
+    margin: 0 auto;
+
+    padding: 38px 0 70px;
+}
+
+/* =========================================
+   DASHBOARD PAGE TITLE
+========================================= */
+
+.upload-title {
+    margin-bottom: 22px;
+}
+
+.upload-title .section-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--teal);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.upload-title h2 {
+    margin: 0 0 5px;
+
+    color: var(--navy);
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.upload-title p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   DASHBOARD STAT GRID
+========================================= */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.dashboard-card {
+    min-height: 125px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    background-color: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18, 63, 131, 0.04);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background-color: var(--blue-soft);
+
+    color: var(--blue);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.card-content strong {
+    margin-top: 4px;
+
+    color: var(--navy);
+
+    font-size: 26px;
+}
+
+.card-content small {
+    margin-top: 3px;
+
+    color: #9aa5b3;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   MIDDLE GRID
+========================================= */
+
+.dashboard-middle {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS / PANELS
+========================================= */
+
+.dashboard-panel {
+    background-color: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18, 63, 131, 0.04);
+
+    overflow: hidden;
+}
+
+.panel-header {
+    min-height: 76px;
+
+    padding: 19px 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.panel-header h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+.panel-status {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RISK CONTENT
+========================================= */
+
+.risk-content {
+    min-height: 230px;
+
+    padding: 27px 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   RISK CIRCLE
+   72%
+========================================= */
+
+.risk-circle {
+    width: 150px;
+    height: 150px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        var(--navy) 0deg 259.2deg,
+        #e5eaf0 259.2deg 360deg
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-circle-inner {
+    width: 112px;
+    height: 112px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.risk-circle-inner strong {
+    color: var(--navy);
+
+    font-size: 27px;
+}
+
+.risk-circle-inner span {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   RISK DETAILS
+========================================= */
+
+.risk-details {
+    flex: 1;
+}
+
+.risk-row {
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.risk-row:last-child {
+    border-bottom: none;
+}
+
+.risk-row div {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.risk-row strong {
+    color: var(--navy);
+}
+
+.risk-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+.risk-dot.high {
+    background-color: var(--red);
+}
+
+.risk-dot.medium {
+    background-color: #e2a93b;
+}
+
+.risk-dot.low {
+    background-color: var(--teal);
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.action-list {
+    padding: 7px 16px 12px;
+}
+
+.dashboard-action {
+    min-height: 61px;
+
+    padding: 9px 6px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.dashboard-action:last-child {
+    border-bottom: none;
+}
+
+.dashboard-action:hover {
+    background-color: #fafcfe;
+
+    border-radius: 8px;
+}
+
+.action-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background-color: var(--blue-soft);
+
+    color: var(--blue);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.dashboard-action div {
+    flex: 1;
+}
+
+.dashboard-action strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 11px;
+}
+
+.dashboard-action small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.action-arrow {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RECENT CONTRACTS
+========================================= */
+
+.recent-contracts {
+    margin-bottom: 18px;
+}
+
+.view-all {
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.contracts-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.contracts-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.contracts-table th {
+    padding: 12px 18px;
+
+    background-color: #fafbfd;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-align: left;
+}
+
+.contracts-table td {
+    padding: 13px 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.contracts-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   CONTRACT NAME
+========================================= */
+
+.contract-name {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.contract-name strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+.contract-name small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9aa5b3;
+
+    font-size: 8px;
+}
+
+.contract-file {
+    width: 32px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background-color: var(--red-soft);
+
+    color: var(--red);
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.status-badge,
+.risk-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.status-badge.analyzed {
+    background-color: #edf8f5;
+
+    color: #319277;
+}
+
+.risk-badge.high-risk {
+    background-color: var(--red-soft);
+
+    color: var(--red);
+}
+
+.risk-badge.medium-risk {
+    background-color: #fff8e9;
+
+    color: #b08329;
+}
+
+.risk-badge.low-risk {
+    background-color: #edf8f5;
+
+    color: #319277;
+}
+
+
+/* =========================================
+   TABLE ACTION
+========================================= */
+
+.table-action {
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.table-action:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   AI INFO
+========================================= */
+
+.dashboard-info {
+    min-height: 70px;
+
+    padding: 15px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background-color: var(--blue-soft);
+
+    border: 1px solid #dcecf2;
+
+    border-radius: 12px;
+}
+
+.dashboard-info > div {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.info-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background-color: var(--navy);
+
+    color: white;
+
+    font-size: 13px;
+}
+
+.dashboard-info strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+.dashboard-info p {
+    margin: 3px 0 0;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.dashboard-info > a {
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.dashboard-info > a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-middle {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sanad-header {
+        padding: 0 4%;
+    }
+
+    .sanad-brand > p {
+        display: none;
+    }
+
+    .assistant-sidebar {
+        display: none;
+    }
+
+    .dashboard-container {
+        width: 92%;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-content {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .dashboard-info {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+   FINAL DASHBOARD TITLE
+========================================= */
+
+.dashboard-title {
+    margin: 0 0 20px !important;
+    padding: 0 !important;
+  
+}
+
+.dashboard-title .section-label {
+    display: block;
+
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+
+    color: var(--teal) !important;
+
+    font-size: 9px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.2px !important;
+
+    line-height: 1.2 !important;
+}
+
+.dashboard-title h2 {
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+
+    color: var(--navy) !important;
+
+    font-size: 22px !important;
+    font-weight: 700 !important;
+
+    line-height: 1.25 !important;
+}
+
+.dashboard-title p {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--muted) !important;
+
+    font-size: 11px !important;
+    font-weight: 400 !important;
+
+    line-height: 1.4 !important;
+}

@@ -1,0 +1,918 @@
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+    --navy: #123f83;
+    --blue: #168fc4;
+    --teal: #19bfa6;
+    --background: #f6f8fb;
+    --white: #ffffff;
+    --text: #17233b;
+    --muted: #7d8798;
+    --border: #e5eaf0;
+
+    --blue-soft: #edf7fb;
+    --green-soft: #edf8f5;
+    --yellow-soft: #fff8e9;
+    --red-soft: #fff1f2;
+
+    --red: #e65561;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sanad-header {
+    width: 100%;
+    height: 78px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.sanad-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.sanad-logo h1 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+.sanad-logo span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--teal);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.sanad-brand > p {
+    margin: 0;
+
+    padding-left: 18px;
+
+    border-left: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.sanad-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sanad-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.groups-layout {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.groups-sidebar {
+    width: 220px;
+
+    flex-shrink: 0;
+
+    min-height: calc(100vh - 78px);
+
+    padding: 32px 18px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        180deg,
+        #123f83 0%,
+        #15518a 55%,
+        #117b98 100%
+    );
+}
+
+.groups-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* =========================================
+   SIDEBAR LINKS
+========================================= */
+
+.side-link {
+    position: relative;
+
+    display: block;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    color: #edf4fb;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.side-link:hover {
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+}
+
+.side-link.active {
+    background: rgba(255,255,255,0.13);
+
+    color: white;
+
+    font-weight: 700;
+}
+
+.side-link.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+
+    top: 8px;
+    bottom: 8px;
+
+    width: 4px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: linear-gradient(
+        180deg,
+        #11b7e6,
+        #19c7b0
+    );
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.groups-main {
+    flex: 1;
+
+    min-width: 0;
+
+    background: var(--background);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.groups-container {
+    width: min(1160px, 90%);
+
+    margin: 0 auto;
+
+    padding: 38px 0 70px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.groups-title {
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--teal);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.groups-title h2 {
+    margin: 0 0 5px;
+
+    color: var(--navy);
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.groups-title p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   NO DEPARTMENT
+========================================= */
+
+.no-department-card {
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18,63,131,0.04);
+
+    margin-bottom: 20px;
+}
+
+.notice-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--yellow-soft);
+
+    color: #b08329;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.notice-content h3 {
+    margin: 0 0 5px;
+
+    color: var(--navy);
+
+    font-size: 16px;
+}
+
+.notice-content p {
+    margin: 0 0 13px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.settings-button {
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.settings-button:hover {
+    background: var(--blue);
+}
+
+
+/* =========================================
+   DEPARTMENT CARD
+========================================= */
+
+.department-card {
+    padding: 22px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18,63,131,0.04);
+
+    margin-bottom: 18px;
+}
+
+.department-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.department-header h3 {
+    margin: 0 0 5px;
+
+    color: var(--navy);
+
+    font-size: 19px;
+}
+
+.department-header p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.department-badge {
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: var(--blue-soft);
+
+    color: var(--blue);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.department-details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.detail-box {
+    padding: 13px;
+
+    background: #fafbfd;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+}
+
+.detail-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+}
+
+.detail-box strong {
+    color: var(--navy);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   WORKSPACE GRID
+========================================= */
+
+.workspace-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.workspace-card {
+    min-height: 125px;
+
+    padding: 19px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18,63,131,0.04);
+
+    transition: .2s ease;
+}
+
+.workspace-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 9px 22px rgba(18,63,131,0.08);
+}
+
+.workspace-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--blue-soft);
+
+    color: var(--blue);
+
+    font-size: 16px;
+}
+
+.workspace-text h3 {
+    margin: 2px 0 6px;
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+.workspace-text p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CONTRACTS PANEL
+========================================= */
+
+.contracts-panel {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(18,63,131,0.04);
+
+    overflow: hidden;
+}
+
+.panel-header {
+    min-height: 72px;
+
+    padding: 18px 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.panel-header h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+.panel-status {
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.contract-upload-area {
+    margin: 20px;
+
+    padding: 22px;
+
+    border: 1.5px dashed #c9d4e1;
+
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    background: #fcfdff;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #edf6ff,
+        #e9fbf7
+    );
+
+    color: var(--blue);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.upload-text {
+    flex: 1;
+}
+
+.upload-text h3 {
+    margin: 0 0 4px;
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+.upload-text p {
+    margin: 0 0 4px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.upload-text small {
+    color: #9aa5b3;
+
+    font-size: 9px;
+}
+
+.upload-button {
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background: linear-gradient(
+        90deg,
+        #1553b8,
+        #0aa9d6,
+        #19cfa3
+    );
+}
+
+
+/* =========================================
+   SELECTED FILE
+========================================= */
+
+.selected-file {
+    display: none;
+
+    margin: 0 20px 13px;
+
+    padding: 12px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #fafbfd;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+}
+
+.file-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: var(--red-soft);
+
+    color: var(--red);
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.file-information {
+    flex: 1;
+}
+
+.file-information strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+.file-information span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.remove-file {
+    border: none;
+
+    background: transparent;
+
+    color: var(--red);
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ANALYZE BUTTON
+========================================= */
+
+.analyze-button {
+    width: calc(100% - 40px);
+
+    margin: 0 20px 20px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.analyze-button:hover {
+    background: linear-gradient(
+        90deg,
+        #1553b8,
+        #0aa9d6,
+        #19cfa3
+    );
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.upload-status {
+    margin: 0 20px 20px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+}
+
+.upload-status.success {
+    color: #319277;
+}
+
+.upload-status.error {
+    color: var(--red);
+}
+
+
+/* =========================================
+   HIDE WORKSPACE
+========================================= */
+
+#departmentWorkspace.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .department-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .sanad-header {
+        padding: 0 4%;
+    }
+
+    .sanad-brand > p {
+        display: none;
+    }
+
+    .groups-sidebar {
+        display: none;
+    }
+
+    .groups-container {
+        width: 92%;
+    }
+
+    .department-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contract-upload-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .upload-button {
+        width: 100%;
+        text-align: center;
+    }
+}

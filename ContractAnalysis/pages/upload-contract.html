@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Upload Contracts | SANAD</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/upload-contract.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="sanad-header">
+
+    <div class="sanad-brand">
+
+        <div class="sanad-logo">
+
+            <h1>سَنَد</h1>
+
+            <span>SANAD</span>
+
+        </div>
+
+        <p>
+            AI Contract Intelligence
+        </p>
+
+    </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="upload-layout">
+
+
+    <aside class="upload-sidebar">
+
+        <nav>
+
+            <a
+                href="dashboard.html"
+                class="side-link"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="upload-contract.html"
+                class="side-link active"
+            >
+                Upload Contracts
+            </a>
+
+            <a
+                href="my-contracts.html"
+                class="side-link"
+            >
+                My Contracts
+            </a>
+
+            <a
+                href="chatbot.html"
+                class="side-link"
+            >
+                AI Assistant
+            </a>
+
+            <a
+                href="group-dashboard.html"
+                class="side-link"
+            >
+                Groups
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="settings.html"
+                class="side-link"
+            >
+                Settings
+            </a>
+
+            <a
+                href="login.html"
+                class="side-link"
+            >
+                Exit
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="upload-main">
+
+        <div class="upload-container">
+
+
+            <section class="upload-title">
+
+                <span class="section-label">
+                    CONTRACT ANALYSIS
+                </span>
+
+                <h2>
+                    Upload Contracts
+                </h2>
+
+                <p>
+                    Upload your contract files to begin the analysis.
+                </p>
+
+            </section>
+
+
+
+            <section class="upload-grid">
+
+
+                <div class="upload-card upload-main-card">
+
+
+                    <div
+                        class="drop-zone"
+                        id="dropZone"
+                    >
+
+                        <div class="upload-cloud">
+                            ↑
+                        </div>
+
+                        <h3>
+                            Drag &amp; Drop your contract
+                        </h3>
+
+                        <p>
+                            Upload a PDF file from your computer
+                        </p>
+
+                        <label
+                            for="fileInput"
+                            class="choose-file-button"
+                        >
+                            Choose File
+                        </label>
+
+                        <input
+                            id="fileInput"
+                            type="file"
+                            accept=".pdf,application/pdf"
+                            hidden
+                        >
+
+                        <small>
+                            Supported format: PDF
+                        </small>
+
+                    </div>
+
+
+                    <div id="filePreview"></div>
+
+
+                </div>
+
+
+
+                <div class="upload-card upload-guide">
+
+
+                    <div class="guide-title">
+
+                        <span class="guide-icon">
+                            i
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                How it works
+                            </h3>
+
+                            <p>
+                                Simple three-step process
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="guide-step">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Upload
+                            </strong>
+
+                            <p>
+                                Select your contract PDF.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="guide-step">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Analyze
+                            </strong>
+
+                            <p>
+                                The system extracts key information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="guide-step">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Review
+                            </strong>
+
+                            <p>
+                                Explore risks, terms and findings.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     SUCCESS POPUP
+========================================================= -->
+
+<div
+    class="upload-popup-overlay"
+    id="uploadSuccessPopup"
+>
+
+
+    <div class="upload-success-popup">
+
+
+        <button
+            class="popup-close"
+            id="popupClose"
+            type="button"
+        >
+            ×
+        </button>
+
+
+        <div class="popup-success-icon">
+            ✓
+        </div>
+
+
+        <h2>
+            File Added Successfully
+        </h2>
+
+
+        <p
+            class="popup-file-name"
+            id="popupFileName"
+        >
+        </p>
+
+
+        <div class="popup-divider"></div>
+
+
+        <div class="popup-analysis-status">
+
+
+            <div class="popup-loading">
+
+                <div class="popup-spinner"></div>
+
+            </div>
+
+
+            <div class="popup-analysis-text">
+
+                <strong>
+                    AI analysis is in progress
+                </strong>
+
+                <p>
+                    Your contract has been uploaded successfully.
+                    Our AI is currently analyzing the contract.
+                    This may take some time. Please wait.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            type="button"
+            class="popup-contracts-button"
+            id="goToContractsButton"
+        >
+            Go to My Contracts
+        </button>
+
+
+        <p class="popup-note">
+            You can leave this page. The analysis will continue in the background.
+        </p>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="../js/global.js"></script>
+
+<script src="../js/upload-contract.js"></script>
+
+
+</body>
+
+</html>

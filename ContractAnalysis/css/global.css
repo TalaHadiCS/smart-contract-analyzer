@@ -1,0 +1,641 @@
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+    --navy: #123f83;
+    --blue: #168fc4;
+    --teal: #19bfa6;
+
+    --background: #f6f8fb;
+    --white: #ffffff;
+
+    --text: #17233b;
+    --muted: #7d8798;
+
+    --border: #e5eaf0;
+
+    --blue-soft: #edf7fb;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sanad-header {
+    width: 100%;
+    height: 78px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.sanad-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.sanad-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.sanad-logo h1 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+.sanad-logo span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--teal);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.sanad-brand > p {
+    margin: 0;
+
+    padding-left: 18px;
+
+    border-left: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.sanad-user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sanad-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--navy);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PAGE LAYOUT
+========================================= */
+
+.assistant-layout {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.assistant-sidebar {
+    width: 220px;
+
+    flex-shrink: 0;
+
+    min-height: calc(100vh - 78px);
+
+    padding: 32px 18px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        180deg,
+        #123f83 0%,
+        #15518a 55%,
+        #117b98 100%
+    );
+}
+
+
+/* =========================================
+   SIDEBAR NAV
+========================================= */
+
+.assistant-sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   SIDEBAR LINKS
+========================================= */
+
+.side-link {
+    position: relative;
+
+    display: block;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    color: #edf4fb;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.side-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.side-link.active {
+    background-color: rgba(255, 255, 255, 0.13);
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* ACTIVE INDICATOR */
+
+.side-link.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+
+    top: 8px;
+    bottom: 8px;
+
+    width: 4px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: linear-gradient(
+        180deg,
+        #11b7e6,
+        #19c7b0
+    );
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.assistant-main {
+    flex: 1;
+
+    min-width: 0;
+
+    background-color: var(--background);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.groups-container {
+    width: min(1160px, 90%);
+
+    margin: 0 auto;
+
+    padding: 38px 0 70px;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.groups-title {
+    margin-bottom: 24px;
+}
+
+.groups-title .section-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--teal);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.groups-title h2 {
+    margin: 0 0 6px;
+
+    color: var(--navy);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.groups-title p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   GROUP CARD
+========================================= */
+
+.group-card {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 18px rgba(18, 63, 131, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.group-card-header {
+    min-height: 76px;
+
+    padding: 19px 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.group-card-header .section-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--teal);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.group-card-header h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.group-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background-color: #edf8f5;
+
+    color: #319277;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.group-status::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: #319277;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.group-content {
+    padding: 28px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.group-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--teal);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   GROUP NAME
+========================================= */
+
+.group-name {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.group-description {
+    max-width: 700px;
+
+    margin: 8px 0 22px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   INFO GRID
+========================================= */
+
+.group-info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   INFO ITEM
+========================================= */
+
+.group-info-item {
+    padding: 17px;
+
+    background-color: #fafbfd;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+.group-info-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.group-info-item strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.group-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    border-radius: 9px;
+
+    background-color: var(--navy);
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.group-button:hover {
+    background: linear-gradient(
+        90deg,
+        #1553b8,
+        #0aa9d6,
+        #19cfa3
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(10, 169, 187, 0.18);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .group-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sanad-header {
+        padding: 0 4%;
+    }
+
+    .sanad-brand > p {
+        display: none;
+    }
+
+    .sanad-user {
+        display: none;
+    }
+
+    .assistant-sidebar {
+        display: none;
+    }
+
+    .groups-container {
+        width: 92%;
+    }
+
+    .groups-title h2 {
+        font-size: 21px;
+    }
+
+    .group-content {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,17 @@
+﻿# Environment variables and secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Uploaded files
+uploads/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
